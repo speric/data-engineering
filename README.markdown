@@ -14,7 +14,7 @@ $ cd data-engineering
 
 3 - Run setup script (install gems via Bundler, creates local dbs)
 ```
-$ sh app-setup.sh
+$ sh app_setup.sh
 ```
 4 - Start local server
 ```
