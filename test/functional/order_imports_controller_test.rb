@@ -1,13 +1,17 @@
 require 'test_helper'
 
 class OrderImportsControllerTest < ActionController::TestCase
+  setup :activate_authlogic
+  
   test "should get new with no errors" do
+    UserSession.create(users(:eric))
     get :new
     assert_response :success
     assert_not_nil assigns(:importer)
   end
 
   test "should show a notice if no file is uploaded" do
+    UserSession.create(users(:eric))
     post :create, 
          import_record_type: "order"
 
@@ -25,6 +29,7 @@ class OrderImportsControllerTest < ActionController::TestCase
     file.write(tab_file_rows)
     file.rewind
 
+    UserSession.create(users(:eric))
     post :create, 
          import_file: Rack::Test::UploadedFile.new(file, 'text/csv'),
          import_record_type: "order"

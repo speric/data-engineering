@@ -1,6 +1,8 @@
 class OrderImportsController < ApplicationController
   include ActionView::Helpers::NumberHelper
   
+  before_filter :require_user
+  
   def new
     @importer = Importer.new
   end

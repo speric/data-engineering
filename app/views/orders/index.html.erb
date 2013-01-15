@@ -22,7 +22,7 @@
 				<td><%= h order.voucher_count %></td>
 				<td><%= h order.merchant.full_name %></td>
 				<td><%= h order.merchant.address %></td>
-				<td><%= h number_to_currency(order.total_price) %></td>
+				<td><%= h number_to_currency(order.total_revenue) %></td>
 			</tr>
 		<% end %>
 		</table>

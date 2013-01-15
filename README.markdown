@@ -20,7 +20,10 @@ $ rails server
 ```
 5 - Navigate to [http://localhost:3000](http://localhost:3000)
 
+Login with `engineering@prudentiadigital.com/test` or create your own account.
+
 ##Run Tests
 ```
+$ rake db:test:load
 $ rake test
 ```
