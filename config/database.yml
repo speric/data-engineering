@@ -1,0 +1,23 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: dbDataEngineeringDev
+  username: root
+  password: 
+  host: localhost
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: dbDataEngineeringTest
+  username: root
+  password: 
+  host: localhost
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: dbDataEngineeringProd
+  username: root
+  password: 
+  host: localhost
