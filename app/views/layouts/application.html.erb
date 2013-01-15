@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LivingSocial Software Engineer Challenge</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <style>body { padding-top: 60px; }</style>
+</head>
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="brand"><a href="/">LivingSocial Software Engineer Challenge</a></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="content">
+		  <% unless flash[:notice].blank? %>
+		    <div class="alert alert-success"><%= flash[:notice] %></div>
+		  <% end %>
+
+      <%= yield %>
+    </div>
+    <hr>
+    <footer>
+      <p>Created by <a href="http://github.com/speric">Eric Farkas</a> (<a href="mailto:eric@prudentiadigital.com">eric@prudentiadigital.com</a>), applying for the Senior Software Engineer position.</p>
+    </footer>
+  </div>
+</body>
+</html>

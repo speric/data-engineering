@@ -1,0 +1,5 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+bobs_pizza:
+  full_name: Bob's Pizza
+  address: 987 Fake St
