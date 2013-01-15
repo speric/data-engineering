@@ -8,7 +8,7 @@ class Order < ActiveRecord::Base
 
   attr_accessible :customer_id, :voucher_id, :merchant_id, :voucher_count
   
-  def total_price
+  def total_revenue
     self.voucher.price.to_f * self.voucher_count.to_f
   end
 end

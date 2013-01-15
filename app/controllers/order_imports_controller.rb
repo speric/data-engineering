@@ -15,7 +15,7 @@ class OrderImportsController < ApplicationController
       @importer.import!
     
       @imported_count = @importer.imported_records.count
-      @total_revenue = @importer.imported_records.sum(&:total_price)
+      @total_revenue = @importer.imported_records.sum(&:total_revenue)
     
       redirect_to root_url, notice: "#{@imported_count} valid orders representing #{number_to_currency(@total_revenue)} in revenue were imported."
     end

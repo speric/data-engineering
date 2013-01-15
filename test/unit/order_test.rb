@@ -53,6 +53,6 @@ class OrderTest < ActiveSupport::TestCase
     order.voucher = vouchers(:sneakers)
     order.voucher_count = 3
     assert order.save
-    assert_equal order.total_price, 30.0
+    assert_equal order.total_revenue, 30.0
   end
 end
