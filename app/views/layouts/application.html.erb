@@ -15,20 +15,20 @@
     <div class="navbar-inner">
       <div class="container">
         <span class="brand"><a href="/">LivingSocial Software Engineer Challenge</a></span>
-				<% if current_user %>
-			    <p class="navbar-text pull-right"><%= link_to "Sign Out #{current_user.full_name}", :signout %></p>
-				<% else %>
-				  <p class="navbar-text pull-right"><%= link_to "Sign In", :signin %></p>
-				<% end %>
+        <% if current_user %>
+          <p class="navbar-text pull-right"><%= link_to "Sign Out #{current_user.full_name}", :signout %></p>
+        <% else %>
+          <p class="navbar-text pull-right"><%= link_to "Sign In", :signin %></p>
+        <% end %>
       </div>
     </div>
   </div>
 
   <div class="container">
     <div id="content">
-		  <% unless flash[:notice].blank? %>
-		    <div class="alert alert-success"><%= flash[:notice] %></div>
-		  <% end %>
+      <% unless flash[:notice].blank? %>
+        <div class="alert alert-success"><%= flash[:notice] %></div>
+      <% end %>
 
       <%= yield %>
     </div>
