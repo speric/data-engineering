@@ -9,6 +9,7 @@ $ git clone git@github.com:speric/data-engineering.git
 $ cd data-engineering
 ```
 2 - Edit `config/database.yml` with the proper credentials for your local db
+
 3 - Run setup script (install gems via Bundler, creates local dbs)
 ```
 $ ./app-setup.sh
@@ -23,8 +24,3 @@ $ rails server
 ```
 $ rake test
 ```
-
-- controller: test for blank uploaded file
-- controller tests
-- parser tests
-- authentication

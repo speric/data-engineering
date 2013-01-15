@@ -1,7 +1,6 @@
 DataEngineering::Application.routes.draw do
-  resources :orders do
-    collection { post :import }
-  end
-  
+  resources :orders
+  resources :order_imports
+
   root :to => 'orders#index'
 end

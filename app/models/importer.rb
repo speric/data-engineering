@@ -9,8 +9,11 @@ class Importer
 
   def import!
     rows_from_parsed_file.each do |row|
-      record = import_factory.create(normalizer_factory.normalize(row))
-      @imported_records.push(record)
+      normalized_record = normalizer_factory.normalize(row)
+      if normalized_record.valid?
+        normalized_record.save
+        @imported_records.push(normalized_record)
+      end
     end
   end
   

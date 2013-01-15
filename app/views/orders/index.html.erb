@@ -2,11 +2,7 @@
 	<div class="span12">
 		<h2>All Orders</h2>
 		
-		<%= form_tag import_orders_path, multipart: true do %>
-		  <%= file_field_tag :import_file %>
-		  <%= hidden_field_tag :import_record_type, "order" %>
-		  <%= submit_tag "Import File", :class => "btn btn-primary" %>
-		<% end %>
+		<p><%= link_to "Import Orders", new_order_import_path, :class => "btn" %></p>
 		
 		<table class="table table-striped">
 		  <tr>
