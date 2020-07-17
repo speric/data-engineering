@@ -3,7 +3,7 @@ Based on [https://github.com/lschallenges/data-engineering/blob/master/README.ma
 
 Tested with Ruby 1.9.3p125, Rails 3.2.11
 
-##Set-up
+## Set-up
 
 1 - Check out the app from GitHub
 ```
@@ -24,7 +24,7 @@ $ rails server
 
 Login with `engineering@prudentiadigital.com/test` or create your own account.
 
-##Run Tests
+## Run Tests
 ```
 $ rake db:test:load
 $ rake test
